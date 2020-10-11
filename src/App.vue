@@ -1,32 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navbar></navbar>
     <router-view/>
+    <!-- <piedDePage/> -->
+    <!--<pied-de-page></pied-de-page>-->
   </div>
 </template>
 
+<script>
+import navbar from './components/template/Navbar'
+import piedDePage from './components/template/PiedDePage'
+
+export default {
+  components: {
+    navbar,
+    // eslint-disable-next-line vue/no-unused-components
+    piedDePage
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  textarea {
+    resize: none;
+  }
 
-#nav {
-  padding: 30px;
-}
+  .marginWithFooter {
+    margin-bottom: 60px;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .cardInfo{
+    margin-top: 9%;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .bgCard{
+    background-color: #fff;
+  }
+
+  .iconBack{
+    color: #000;
+    font-size: 2rem;
+  }
+  .iconBack:hover{
+    color: #000;
+  }
+
+  .btnLeave{
+    text-decoration: none;
+    color: #fff;
+  }
+  .btnLeave:hover{
+    color: #fff;
+    text-decoration: none;
+  }
 </style>
